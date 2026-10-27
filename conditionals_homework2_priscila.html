@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>The 4 Conditionals — Homework 2</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.12.1/html2pdf.bundle.min.js"></script>
+<style>
+  :root{--accent:#E24C3F;--accent-bg:#FCE9E7;--ink:#1A1A1A;--muted:#666;}
+  *{box-sizing:border-box;}
+  body{font-family:-apple-system,"Segoe UI",Calibri,Arial,sans-serif;color:var(--ink);background:#fafafa;margin:0;padding:24px 12px 60px;line-height:1.5;}
+  .wrap{max-width:820px;margin:0 auto;background:#fff;padding:36px 40px;border-radius:8px;box-shadow:0 1px 6px rgba(0,0,0,.08);}
+  h1{color:var(--accent);font-size:26px;margin:0 0 6px;}
+  h2{color:var(--accent);font-size:19px;margin:34px 0 12px;border-bottom:2px solid var(--accent-bg);padding-bottom:6px;}
+  .meta{margin:0 0 14px;font-size:14px;}
+  .meta em{color:var(--muted);}
+  .instructions{background:#fff8e6;border-left:4px solid #E8B93A;padding:10px 14px;font-size:14px;font-style:italic;color:#555;}
+  .box{background:var(--accent-bg);border-left:4px solid var(--accent);padding:14px 18px;text-align:center;color:#8A2E23;font-style:italic;font-size:14.5px;}
+  .endings{background:#f6f6f6;border:1px solid #e2e2e2;border-radius:6px;padding:14px 18px;font-size:14.5px;margin-top:10px;}
+  .endings p{margin:6px 0;}
+  table{width:100%;border-collapse:collapse;margin-top:14px;font-size:14.5px;}
+  th{background:var(--ink);color:#fff;text-align:left;padding:8px 12px;}
+  td{padding:8px 12px;border-bottom:1px solid #eee;}
+  select{padding:5px 8px;border:1px solid #ccc;border-radius:4px;font-size:14px;background:#fff;}
+  ol{padding-left:20px;}
+  ol li{margin-bottom:14px;font-size:15px;}
+  input.gap{border:none;border-bottom:2px solid #bbb;background:transparent;font-size:15px;font-family:inherit;padding:2px 4px;width:190px;color:var(--accent);font-weight:600;}
+  input.gap:focus{outline:none;border-bottom-color:var(--accent);}
+  .mc-item{margin-bottom:16px;font-size:15px;}
+  .mc-options{margin-top:4px;padding-left:18px;}
+  .mc-options label{margin-right:18px;font-size:14px;color:#444;cursor:pointer;}
+  input[type=radio]{margin-right:5px;}
+  textarea{width:100%;border:1px solid #ccc;border-radius:6px;padding:12px;font-family:inherit;font-size:14.5px;resize:vertical;}
+  input.long{width:100%;border:none;border-bottom:2px solid #bbb;background:transparent;font-size:14.5px;font-family:inherit;padding:4px 2px;margin:4px 0 10px;}
+  input.long:focus{outline:none;border-bottom-color:var(--accent);}
+  .check-btn{margin-top:14px;background:var(--accent);color:#fff;border:none;padding:9px 18px;border-radius:20px;font-size:13.5px;cursor:pointer;font-weight:600;}
+  .check-btn:hover{background:#c93b2e;}
+  .answers{margin-top:12px;background:#f4f9f4;border-left:4px solid #4a9d5b;padding:12px 16px;font-size:14px;color:#2e5c38;}
+  .hidden{display:none;}
+  .footer-actions{margin-top:40px;text-align:center;}
+  .save-btn{background:#1a7a3c;color:#fff;border:none;padding:12px 26px;border-radius:22px;font-size:15px;cursor:pointer;font-weight:700;box-shadow:0 2px 6px rgba(26,122,60,.35);}
+  .save-btn:hover{background:#146030;}
+  .save-btn:disabled{background:#9bbfa6;cursor:wait;}
+  .save-note{font-size:12.5px;color:#888;margin:10px 0 0;}
+  .pdf-name-row{margin:14px 0;display:flex;gap:10px;justify-content:center;align-items:center;flex-wrap:wrap;}
+  .pdf-name-row input{border:1px solid #ccc;border-radius:6px;padding:8px 10px;font-size:14px;font-family:inherit;width:260px;}
+</style>
+</head>
+<body>
+<div class="wrap" id="pdfContent">
+
+  <h1>The 4 Conditionals — Homework 2</h1>
+  <p class="meta"><strong>Student:</strong> <span id="studentNameDisplay">___________</span> &nbsp;|&nbsp; <em>Using conditionals in context · unless, provided that, otherwise, but for · C1 · legal context</em></p>
+  <p class="instructions">Fill in your answers right here on the page. They are saved automatically. When you finish, click "Save as PDF".</p>
+
+  <h2>Quick reference</h2>
+  <table>
+    <tr><th>Type</th><th>Structure</th><th>Use</th></tr>
+    <tr><td><strong>Zero</strong></td><td>If + present, present</td><td>general truths, rules, procedures</td></tr>
+    <tr><td><strong>First</strong></td><td>If + present, will / may / can + verb</td><td>real, likely future situations</td></tr>
+    <tr><td><strong>Second</strong></td><td>If + past, would / could / might + verb</td><td>hypothetical or unlikely present/future</td></tr>
+    <tr><td><strong>Third</strong></td><td>If + past perfect, would / could / might have + past participle</td><td>imagined past — regrets, criticism, speculation</td></tr>
+  </table>
+  <div class="box" style="margin-top:14px;">C1 alternatives: unless · provided (that) · as long as · on condition that · suppose / supposing · otherwise · but for<br>Inversion (formal): <strong>Should</strong> you need… · <strong>Were</strong> the court to rule… · <strong>Had</strong> we known…</div>
+
+  <h2>Part 1 — Choose the best option</h2>
+  <p>Choose the option that best completes each sentence. Pay attention to meaning and register.</p>
+  <div class="mc-item">1. If the contract ___ governed by Californian law, the non-compete clause would be unenforceable.
+    <div class="mc-options">
+      <label><input type="radio" name="q1" value="a">is</label>
+      <label><input type="radio" name="q1" value="b">were</label>
+      <label><input type="radio" name="q1" value="c">had been</label>
+    </div></div>
+  <div class="mc-item">2. You can submit the brief late ___ you get written permission from the professor.
+    <div class="mc-options">
+      <label><input type="radio" name="q2" value="a">unless</label>
+      <label><input type="radio" name="q2" value="b">provided that</label>
+      <label><input type="radio" name="q2" value="c">otherwise</label>
+    </div></div>
+  <div class="mc-item">3. If I had read the fine print, I ___ that lease.
+    <div class="mc-options">
+      <label><input type="radio" name="q3" value="a">wouldn't sign</label>
+      <label><input type="radio" name="q3" value="b">won't sign</label>
+      <label><input type="radio" name="q3" value="c">wouldn't have signed</label>
+    </div></div>
+  <div class="mc-item">4. If water ___ 100°C, it boils — and if a deadline falls on a weekend, it ___ to the next business day.
+    <div class="mc-options">
+      <label><input type="radio" name="q4" value="a">reaches / moves</label>
+      <label><input type="radio" name="q4" value="b">will reach / will move</label>
+      <label><input type="radio" name="q4" value="c">reached / moved</label>
+    </div></div>
+  <div class="mc-item">5. Keep a copy of every email to the client; ___, you'll have no record if a dispute arises.
+    <div class="mc-options">
+      <label><input type="radio" name="q5" value="a">unless</label>
+      <label><input type="radio" name="q5" value="b">otherwise</label>
+      <label><input type="radio" name="q5" value="c">as long as</label>
+    </div></div>
+  <div class="mc-item">6. ___ for her quick thinking, the deal would have collapsed during the final negotiation.
+    <div class="mc-options">
+      <label><input type="radio" name="q6" value="a">If it wasn't</label>
+      <label><input type="radio" name="q6" value="b">But</label>
+      <label><input type="radio" name="q6" value="c">Had it not been</label>
+    </div></div>
+  <button class="check-btn no-pdf" onclick="toggle('bns1')">Show answers</button>
+  <div id="bns1" class="answers hidden">1. were &nbsp;|&nbsp; 2. provided that &nbsp;|&nbsp; 3. wouldn't have signed &nbsp;|&nbsp; 4. reaches / moves &nbsp;|&nbsp; 5. otherwise &nbsp;|&nbsp; 6. Had it not been<br><br>
+  <em>Note:</em> in 6, "If it hadn't been for…" is also correct — "Had it not been for…" is the formal, inverted version.</div>
+
+  <h2>Part 2 — Rewrite the sentences</h2>
+  <p>Rewrite each situation as one conditional sentence. Choose the conditional that fits the meaning.</p>
+  <p>1. <em>I didn't check the statute of limitations. We missed the deadline.</em><input class="long"></p>
+  <p>2. <em>I don't speak Spanish fluently, so I can't take on clients from the Latino community on my own.</em><input class="long"></p>
+  <p>3. <em>The opposing party might accept our offer. Then we'll avoid a costly trial.</em><input class="long"></p>
+  <p>4. <em>The firm didn't offer remote work, so two associates resigned.</em><input class="long"></p>
+  <p>5. <em>You sign a document without reading it. You take a huge risk. (general truth)</em><input class="long"></p>
+  <p>6. <em>My professor doesn't give extensions. I have to submit the paper on Friday.</em><input class="long"></p>
+  <button class="check-btn no-pdf" onclick="toggle('bns2')">Show answers</button>
+  <div id="bns2" class="answers hidden">
+    <em>Suggested answers:</em><br>
+    1. If I had checked the statute of limitations, we wouldn't have missed the deadline. <em>(third)</em><br>
+    2. If I spoke Spanish fluently, I could take on clients from the Latino community on my own. <em>(second)</em><br>
+    3. If the opposing party accepts our offer, we'll avoid a costly trial. <em>(first)</em><br>
+    4. If the firm had offered remote work, two associates wouldn't have resigned. <em>(third)</em><br>
+    5. If you sign a document without reading it, you take a huge risk. <em>(zero)</em><br>
+    6. If my professor gave extensions, I wouldn't have to submit the paper on Friday. <em>(second)</em>
+  </div>
+
+  <h2>Part 3 — Find and correct the mistake</h2>
+  <p>Each sentence has ONE mistake. Rewrite it correctly.</p>
+  <p>1. <em>"If I would have known about the hearing, I would have prepared better."</em><input class="long"></p>
+  <p>2. <em>"If the client will call, please tell her I'm in court."</em><input class="long"></p>
+  <p>3. <em>"If I was a partner at this firm, I would change the billing policy."</em> <span style="font-size:13px;color:#888;">(formal register)</span><input class="long"></p>
+  <p>4. <em>"Unless you don't submit the form, your application won't be processed."</em><input class="long"></p>
+  <p>5. <em>"Hadn't the judge intervened, the argument would have escalated."</em><input class="long"></p>
+  <p>6. <em>"If she had passed the bar exam last year, she would work at a big firm last summer."</em><input class="long"></p>
+  <button class="check-btn no-pdf" onclick="toggle('bns3')">Show answers</button>
+  <div id="bns3" class="answers hidden">
+    1. If I <strong>had known</strong> about the hearing… <em>(never "would" in the if-clause)</em><br>
+    2. If the client <strong>calls</strong>, please tell her I'm in court.<br>
+    3. If I <strong>were</strong> a partner at this firm… <em>("was" is common in speech, but "were" is expected in formal English)</em><br>
+    4. Unless you <strong>submit</strong> the form… <em>(unless = if… not — no double negative)</em><br>
+    5. <strong>Had the judge not intervened</strong>, the argument would have escalated.<br>
+    6. …she <strong>would have worked</strong> at a big firm last summer. <em>(both halves are in the past)</em>
+  </div>
+
+  <h2>Part 4 — Writing</h2>
+  <p><strong>4a.</strong> A client asks you by email: <em>"What happens if I just ignore the lawsuit?"</em> Write a short, professional reply (80–100 words) explaining the possible consequences. Use at least one <strong>zero</strong>, one <strong>first</strong> and one <strong>formal inversion</strong> (Should…).</p>
+  <textarea rows="6" placeholder="Dear Mr. Thompson, ..."></textarea>
+  <button class="check-btn no-pdf" onclick="toggle('bns4')">Show model answer</button>
+  <div id="bns4" class="answers hidden">
+    <em>Model answer (one possibility):</em><br>
+    Dear Mr. Thompson, thank you for your message. I strongly advise against ignoring the lawsuit. In California, if a defendant doesn't respond within 30 days, the plaintiff can request a default judgment. If that happens, the court will likely award the full amount claimed, and it may be very difficult to reverse. Should you decide to respond, we will review the complaint together and file an answer well before the deadline. Please let me know by Friday how you would like to proceed. Best regards, [Name]
+  </div>
+
+  <p style="margin-top:26px;"><strong>4b.</strong> Think about your journey from practising law in Brazil to working and studying in the US. Write a paragraph (120–150 words) about it using all four conditionals: a <strong>third</strong> (a decision in the past), a <strong>second</strong> (an imagined present), a <strong>first</strong> (a plan for the future) and a <strong>zero</strong> (a general truth you've learned).</p>
+  <textarea rows="8" placeholder="If I hadn't decided to move to the US, ..."></textarea>
+
+  <div class="footer-actions no-pdf">
+    <p class="save-note">💾 Your answers are saved automatically in this browser as you type.</p>
+    <div class="pdf-name-row">
+      <label for="studentNameInput" style="font-size:13.5px;color:#555;">Your name (shown on the PDF):</label>
+      <input type="text" id="studentNameInput" placeholder="e.g. Priscila">
+    </div>
+    <button class="save-btn" id="saveBtn" onclick="saveAsPDF()">💾 Save as PDF</button>
+  </div>
+
+</div>
+
+<script>
+  const STORAGE_KEY = 'conditionals_hw2_priscila_c1';
+
+
+
+  // ----- daqui pra baixo é o motor: NÃO precisa mexer -----
+  function getFields(){
+    return Array.from(document.querySelectorAll('#pdfContent input, #pdfContent select, #pdfContent textarea'));
+  }
+  function saveAnswers(){
+    const data = {};
+    getFields().forEach((el, i) => {
+      if(el.type === 'radio'){ if(el.checked) data['radio_' + el.name] = el.value; }
+      else { data['f' + i] = el.value; }
+    });
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+  }
+  function loadAnswers(){
+    const raw = localStorage.getItem(STORAGE_KEY);
+    if(!raw) return;
+    const data = JSON.parse(raw);
+    getFields().forEach((el, i) => {
+      if(el.type === 'radio'){ if(data['radio_' + el.name] === el.value) el.checked = true; }
+      else if(('f' + i) in data){ el.value = data['f' + i]; }
+    });
+  }
+  function toggle(id){ document.getElementById(id).classList.toggle('hidden'); }
+  function autoGrow(el){ el.style.height = 'auto'; el.style.height = (el.scrollHeight + 4) + 'px'; }
+  document.querySelectorAll('textarea').forEach(t => t.addEventListener('input', () => autoGrow(t)));
+
+  const nameInput = document.getElementById('studentNameInput');
+  const nameDisplay = document.getElementById('studentNameDisplay');
+  nameInput.addEventListener('input', () => {
+    nameDisplay.textContent = nameInput.value.trim() || '___________';
+  });
+
+  document.addEventListener('input', saveAnswers);
+  document.addEventListener('change', saveAnswers);
+  window.addEventListener('load', () => {
+    loadAnswers();
+    document.querySelectorAll('textarea').forEach(t => autoGrow(t));
+    nameDisplay.textContent = nameInput.value.trim() || '___________';
+  });
+
+  function saveAsPDF(){
+    const btn = document.getElementById('saveBtn');
+    btn.disabled = true; btn.textContent = '⏳ Generating PDF...';
+    const noPdfEls = document.querySelectorAll('.no-pdf');
+    noPdfEls.forEach(el => el.style.visibility = 'hidden');
+    const el = document.getElementById('pdfContent');
+    const name = nameInput.value.trim() || 'student';
+    const fileName = STORAGE_KEY + '_' + name.replace(/[^a-z0-9]+/gi, '_') + '.pdf';
+    const opt = {
+      margin: [10, 10, 10, 10], filename: fileName,
+      image: { type: 'jpeg', quality: 0.98 },
+      html2canvas: { scale: 2, useCORS: true },
+      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait' },
+      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+    };
+    html2pdf().set(opt).from(el).save().then(() => {
+      noPdfEls.forEach(el => el.style.visibility = ''); btn.disabled = false; btn.textContent = '💾 Save as PDF';
+    }).catch(() => {
+      noPdfEls.forEach(el => el.style.visibility = ''); btn.disabled = false; btn.textContent = '💾 Save as PDF';
+      alert('The PDF could not be generated. Please try again or use Ctrl+P / Cmd+P.');
+    });
+  }
+</script>
+</body>
+</html>
